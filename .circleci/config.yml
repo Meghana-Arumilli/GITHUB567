@@ -11,8 +11,8 @@ jobs:
       - checkout
       - run:
           command: |
-            pip install pytest
-            pytest --junitxml=test-results/junit.xml TestTriangle.py
+            pip install -r requirements.txt
+            pytest --junitxml=test-results/junit.xml github.py
       - store_test_results:
           path: test-results
 
