@@ -8,6 +8,9 @@ def get_from_github(username):
     # print(data.status_code)
     if data.status_code == 200:
         repos = json.loads(data.text)
+        if len(repos):
+            return 'unable to fetch repos from user'
+
         for repo in repos:
             repourl = repo['url']
             repodata = requests.get(repourl)
