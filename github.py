@@ -2,13 +2,15 @@ import requests, json
 
 def get_from_github(username):
 
-    url = 'https://api.github.com/users/' +  username + '/repos'    
+    url = 'https://api.github.com/users/' +  username + '/repos'   
+    print(url) 
     data = requests.get(url)
     result = []
     # print(data.status_code)
     if data.status_code == 200:
         repos = json.loads(data.text)
-        if len(repos):
+        # print(len(repos))
+        if len(repos) == 0:
             return 'unable to fetch repos from user'
 
         for repo in repos:

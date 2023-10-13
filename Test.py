@@ -8,7 +8,7 @@ class TestGetRepo(unittest.TestCase):
         expected = [
             'Repo: BUMP Number of commits: 8',
             'Repo: DBMS Number of commits: 1',
-            'Repo: Github567 Number of commits: 9',
+            'Repo: Github567 Number of commits: 12',
             'Repo: IDS-PROJECT Number of commits: 4',
             'Repo: Knowledge-Management Number of commits: 3',
             'Repo: Testing567 Number of commits: 19'
